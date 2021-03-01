@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Project Page - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project" style="padding-top: 20px;padding-bottom: 20px;">
+            <div class="container">
+                <div class="heading">
+                    <h2 style="margin-bottom: -50px;"><strong>Smart hydroponics monitoring system for urban cities</strong></h2>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/plant.png"></div>
+                    <div class="col-lg-6 col-xl-6">
+                        <h3>Description</h3>
+                        <p>A smart hydroponic monitoring system that allows the user to have a close control of the of health and conditions of a hydroponic system. Checking data from PH in the water solution, water and environment temperature, humidity,
+                            PPM, and solar radiance. The monitored data is then presented in a graphical user interface to allow the user to interact and evaluate what actions to take to maximize crop yield and plant health.</p>
+                        <p></p>
+                    </div>
+                    <div class="col-xl-12">
+                        <h2 class="text-center">My contribution</h2>
+                    </div>
+                    <div class="col-xl-6">
+                        <h4>Hydroponic System</h4>
+                        <p>Developed a hydroponic system in an urban area in Tijuana using only a wall with a restricted dimension of 2.5 meters by 4 meters. This design was created with budget and local supplies in mind, making it easier to be replicated
+                            in other urban areas. The system is composed of 6 PVC tubes that allow for nutrient rich water to travel across the roots of lettuce plants, keeping a constant flow while cycling the water in a reservoir that collects and reuses
+                            the water, a small pump keeps a constant flow in the system.</p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/wall.png"></div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/monitoring%20system.png"></div>
+                    <div class="col">
+                        <h4>Monitoring system</h4>
+                        <p>The monitoring system microcontroller is the ESP 32 that allows for easy connectivity to WIFI, making it possible to upload data to a server. The sensors used are a PH sensor, a PPM sensor, a temperature sensor, a humidity sensor,
+                            a UV light sensor and a lux sensor. For the analog sensors that require precision an external 16-bit ADC was used connected via I2C. The circuit was creating using a perforated board and a 3D printed board to bolt and hold
+                            all the components together. All this was then placed inside a weatherproof cabinet to prevent water and humidity to enter. A weatherproof casing was 3D printed and painted to allow constant humidity and temperature readings
+                            of the environment without getting wet. The lux and UV sensors are protected using clear epoxy.<br></p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/hydro-azure-home.png"></div>
+                    <div class="col">
+                        <h4>Local and cloud integration</h4>
+                        <p>The data is sent to a cloud and local solution, allowing for both remote and local monitoring. In the local solution a raspberry pi is used as a server running home assistance, which is an integrator for smart houses that has services
+                            like a database and a web graphical user interface. The cloud solution is used running Microsoft azure services where an MQTT broker and a database system stores the data. The ESP32 sends data to the respective MQTT broker
+                            for a light bandwidth data transfer, which is then stored in both databases.<br><br>The cloud integration is designed to be expandible to multiple hydroponic monitoring systems allowing for a scalable solution.<br><br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"></div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
