@@ -14,15 +14,14 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page project-page">
@@ -35,8 +34,7 @@
                     <div class="col-12 col-md-6 offset-md-1 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/line_follower_cover.png"></div>
                     <div class="col-xl-6">
                         <h3>Description</h3>
-                        <p>The concept of the project is to create a robot that can follow a lane, as fast as possible while using an onboard camara and computing unit (Raspberry pi). In my implementation I used OpenCV for image processing and a raspberry
-                            pi camara for faster video refresh rate. </p>
+                        <p>The concept of the project is to create a robot that can follow a lane, as fast as possible while using an onboard camara and computing unit (Raspberry pi). In my implementation I used OpenCV for image processing and a raspberry pi camara for faster video refresh rate. </p>
                         <p></p>
                     </div>
                     <div class="col-xl-12">
@@ -44,21 +42,17 @@
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4>OpenCV&nbsp;</h4>
-                        <p>The image processing was implemented using OpenCV where the frontal camara of the robot can detect the lines. Through image transformation the system can obtain a "birds eyes view" of the lines, eliminating depth of field and knowing
-                            where the trend of the lines is going. With HSV color filter and Hough lines the profile and trend of the lines can be detected aiding the robot determine the center point of the lane plus the strength of the curve to act accordingly.<br></p>
+                        <p>The image processing was implemented using OpenCV where the frontal camara of the robot can detect the lines. Through image transformation the system can obtain a "birds eyes view" of the lines, eliminating depth of field and knowing where the trend of the lines is going. With HSV color filter and Hough lines the profile and trend of the lines can be detected aiding the robot determine the center point of the lane plus the strength of the curve to act accordingly.<br></p>
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;"><img class="img-thumbnail" src="assets/img/Lanefollower.jpg"></div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4>control loop for lane following</h4>
-                        <p>Knowing that the robot needs to have as close to the center of the lane as possible, two references are place which is then compared to the feedback, giving us all the tools necessary to create a PID system. In this application
-                            a discrete control loop allowed the robot to transform the image into steering movement keeping the robot as close to the line as possible. It’s important to note that having a limited computing unit (Raspberry Pi) plus image
-                            processing is intensive providing the system with a slow frequency of around 40 Hz.&nbsp;<br></p>
+                        <p>Knowing that the robot needs to have as close to the center of the lane as possible, two references are place which is then compared to the feedback, giving us all the tools necessary to create a PID system. In this application a discrete control loop allowed the robot to transform the image into steering movement keeping the robot as close to the line as possible. It’s important to note that having a limited computing unit (Raspberry Pi) plus image processing is intensive providing the system with a slow frequency of around 40 Hz.&nbsp;<br></p>
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;"><img class="img-thumbnail" src="assets/img/Control.jpg"></div>
                     <div class="col">
                         <h4>Implementation</h4>
-                        <p><br>The robot was able to successfully go through the lanes, but due to the slow control frequency (low computing power) the robot would have little time to compensate for the error creating an over actuated system. It is important
-                            to note that this is not a problem at lower speeds.<br></p>
+                        <p><br>The robot was able to successfully go through the lanes, but due to the slow control frequency (low computing power) the robot would have little time to compensate for the error creating an over actuated system. It is important to note that this is not a problem at lower speeds.<br></p>
                     </div>
                     <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/X8pB0wFjUB8" width="540" height="315"></iframe></div>
                 </div>

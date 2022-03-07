@@ -14,15 +14,14 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page project-page">
@@ -36,10 +35,7 @@
                     <div class="col-12 col-md-6 col-xl-6 offset-md-1 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/Spie_Coverr.jpg"></div>
                     <div class="col-xl-6">
                         <h3>Abstract</h3>
-                        <p>This paper presents the implementation of mapping, localization and navigation algorithms for a mobile service robot in an unknown environment. The implementation uses a 3D LiDAR sensor to detect the environment and map an occupancy
-                            grid that allows global localization and navigation through the environment. The robot estimates the current position through Monte Carlo localization algorithm with LiDAR sensor and odometry data. The Navigation stack uses
-                            inflation to determine if the service robot can safely navigate through the environment, and avoid obstacles. Experimental results were considered using a physical and simulated robot in an indoor environment without prior
-                            knowledge of obstacles presented in the environment.&nbsp;&nbsp;<br><br></p>
+                        <p>This paper presents the implementation of mapping, localization and navigation algorithms for a mobile service robot in an unknown environment. The implementation uses a 3D LiDAR sensor to detect the environment and map an occupancy grid that allows global localization and navigation through the environment. The robot estimates the current position through Monte Carlo localization algorithm with LiDAR sensor and odometry data. The Navigation stack uses inflation to determine if the service robot can safely navigate through the environment, and avoid obstacles. Experimental results were considered using a physical and simulated robot in an indoor environment without prior knowledge of obstacles presented in the environment.&nbsp;&nbsp;<br><br></p>
                         <p></p>
                     </div>
                     <div class="col-xl-12">
@@ -47,20 +43,17 @@
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4>ROS implementation of service robot</h4>
-                        <p>The implementation of a service robot includes the integration of a web user interface that allows the user to have an effect on the behavior of the robot where in this case to order to robot to go to an specific office. It’s important
-                            to note that the web server is in the local computing system of the robot, but it can be implemented on an external server or via the cloud which would send MQTT messages to the robot.&nbsp;<br></p>
+                        <p>The implementation of a service robot includes the integration of a web user interface that allows the user to have an effect on the behavior of the robot where in this case to order to robot to go to an specific office. It’s important to note that the web server is in the local computing system of the robot, but it can be implemented on an external server or via the cloud which would send MQTT messages to the robot.&nbsp;<br></p>
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;"><img class="img-thumbnail" src="assets/img/Screenshot%20from%202020-06-15%2016-35-13.png"></div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4 style="padding-top: 13px;">Integration of navigation stack with web user interface</h4>
-                        <p>The integration of the navigation stack helps the robot navigate across an environment with two types of navigation systems, a local and a global map, where the global takes into consideration the boundaries and obstacles that
-                            were previously mapped, while the local works with the lidar to avoid instant obstacles that might soon con into place.&nbsp;<br></p>
+                        <p>The integration of the navigation stack helps the robot navigate across an environment with two types of navigation systems, a local and a global map, where the global takes into consideration the boundaries and obstacles that were previously mapped, while the local works with the lidar to avoid instant obstacles that might soon con into place.&nbsp;<br></p>
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/xS5R9PsmXr4" width="540" height="300" style="padding-top: 0px;"></iframe></div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4 style="margin-top: 16px;">Integration of mapping with frontier exploration</h4>
-                        <p>While using the gmapping library on ROS a frontier exploration library was also implemented which allows for the robot to investigate an unknown environment map the totality of the environment. The map of the place is also visualized
-                            in the web user interface to aid the user on where the robot is exploring. </p>
+                        <p>While using the gmapping library on ROS a frontier exploration library was also implemented which allows for the robot to investigate an unknown environment map the totality of the environment. The map of the place is also visualized in the web user interface to aid the user on where the robot is exploring. </p>
                     </div>
                     <div class="col" style="padding-bottom: 15px;"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/Rs-wFCiuftk" width="540" height="300"></iframe></div>
                 </div>

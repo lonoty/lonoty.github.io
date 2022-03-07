@@ -14,15 +14,14 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page project-page">
@@ -36,10 +35,7 @@
                     <div class="col-12 col-md-6 offset-md-1 offset-xl-0 info"><img src="assets/img/pub1_cover.png"></div>
                     <div class="col-xl-6">
                         <h3>Abstract</h3>
-                        <p>This paper presents a proposed algorithm with the implementation of the A* algorithm for path planning in a partially known environment. By using a differential mobile robot, the navigation is accomplished with a LiDAR sensor that
-                            detects any potential changes in the environment. The proposed algorithm estimates a safety path-planning trajectory from the origin of the robot to a target coordinate given by the user. If the robot encounters an unknown
-                            obstacle that does not belong to the known environment it will update the map, and recalculate the trajectory, executing it and proceed with the new path. Experimental results were considered in an indoors cluttered environment
-                            given by unknown obstacles, and partially known maps.<br><br></p>
+                        <p>This paper presents a proposed algorithm with the implementation of the A* algorithm for path planning in a partially known environment. By using a differential mobile robot, the navigation is accomplished with a LiDAR sensor that detects any potential changes in the environment. The proposed algorithm estimates a safety path-planning trajectory from the origin of the robot to a target coordinate given by the user. If the robot encounters an unknown obstacle that does not belong to the known environment it will update the map, and recalculate the trajectory, executing it and proceed with the new path. Experimental results were considered in an indoors cluttered environment given by unknown obstacles, and partially known maps.<br><br></p>
                         <p></p>
                     </div>
                     <div class="col-xl-12">
@@ -47,14 +43,12 @@
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4>A* algorithm with LIDAR feedback</h4>
-                        <p>The project revolves around a waypoint to waypoint navigation in a 20 x 20 grid, where the path created with an A* algorithm. The robot follows such trajectory and if there is an obstacle on the way it will create update the map
-                            and determine a new path. This is done until it reaches the goal, or it given a different path. <br></p>
+                        <p>The project revolves around a waypoint to waypoint navigation in a 20 x 20 grid, where the path created with an A* algorithm. The robot follows such trajectory and if there is an obstacle on the way it will create update the map and determine a new path. This is done until it reaches the goal, or it given a different path. <br></p>
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;"><img src="assets/img/82891158_259494435142715_349133658404887392_n.png"></div>
                     <div class="col">
                         <h4>Implementation</h4>
-                        <p>The robot was created using low cost components and easy to manufacture, the motors that are used on the system are stepper to keep track of the displacement of the robot and determine the direction. Due to the limited computing
-                            power inside the robot the system was implemented in two phases, a movement phase (where it moves for a bit) and a detection phase (where it looks for obstacles in a near future to determine if it can move).</p>
+                        <p>The robot was created using low cost components and easy to manufacture, the motors that are used on the system are stepper to keep track of the displacement of the robot and determine the direction. Due to the limited computing power inside the robot the system was implemented in two phases, a movement phase (where it moves for a bit) and a detection phase (where it looks for obstacles in a near future to determine if it can move).</p>
                     </div>
                     <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/gg3Im1aMHFU" width="540" height="315"></iframe></div>
                 </div>

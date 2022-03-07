@@ -14,15 +14,14 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page project-page">
@@ -35,9 +34,7 @@
                     <div class="col-12 col-md-6 offset-md-1 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/cansat.jpg"></div>
                     <div class="col-xl-6">
                         <h3>Description</h3>
-                        <p>The CanSat competition is an annual state competition in which university students develop CanSats, consisting of can-sized satellites that fulfill a mission (defined by the team) and must be validated with data acquired by the
-                            satellite. The CanSats are launched via a model rocket.&nbsp;<br><br><br>The purpose of our CanSat is to do a long-term survey on terrain and its effectiveness for so solar panel development. This was achieved by monitoring
-                            the daylight time in each day (if it’s on another planet) and the solar radiation. The CanSat can be sustainable with the solar panels that are extended.<br><br></p>
+                        <p>The CanSat competition is an annual state competition in which university students develop CanSats, consisting of can-sized satellites that fulfill a mission (defined by the team) and must be validated with data acquired by the satellite. The CanSats are launched via a model rocket.&nbsp;<br><br><br>The purpose of our CanSat is to do a long-term survey on terrain and its effectiveness for so solar panel development. This was achieved by monitoring the daylight time in each day (if it’s on another planet) and the solar radiation. The CanSat can be sustainable with the solar panels that are extended.<br><br></p>
                         <p></p>
                     </div>
                     <div class="col-xl-12">
@@ -45,21 +42,17 @@
                     </div>
                     <div class="col-xl-6">
                         <h4>PCB Design</h4>
-                        <p>The development of the PCB design considering the small space available, and resources that were available. The design was created with multiple "stacks" of circuits to minimize the space used and allow for multiple through hole
-                            components to fit in place. The circuit consisted of single sided PCB boards that are handmade and etched using Ferric Chloride solution, where each stack has different purposes from power distribution and regulation (1st layer),
-                            Microcontroller module (2nd layer), IMU and altitude sensor (3rd layer) and GPS and light sensors (4th layer).<br></p>
+                        <p>The development of the PCB design considering the small space available, and resources that were available. The design was created with multiple "stacks" of circuits to minimize the space used and allow for multiple through hole components to fit in place. The circuit consisted of single sided PCB boards that are handmade and etched using Ferric Chloride solution, where each stack has different purposes from power distribution and regulation (1st layer), Microcontroller module (2nd layer), IMU and altitude sensor (3rd layer) and GPS and light sensors (4th layer).<br></p>
                     </div>
                     <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/Untitled.jpg" style="width: 359px;height: 361px;margin-left: 83px;"></div>
                     <div class="col-xl-6">
                         <h4>Telemetry and Sensor Data</h4>
-                        <p>Worked on the interpretation of data for all the sensors on-board which include GPS, IMU, Barometer, solar panel voltages and currents, and light intensity sensors, this was processed and interpreted by the on-board microcontroller.
-                            The telemetry was achieved via LoRA communication providing a distance of 4 km range while there is line of sight, and packets of information were sent with a CSV format and a low data with 300 bytes per packet.</p>
+                        <p>Worked on the interpretation of data for all the sensors on-board which include GPS, IMU, Barometer, solar panel voltages and currents, and light intensity sensors, this was processed and interpreted by the on-board microcontroller. The telemetry was achieved via LoRA communication providing a distance of 4 km range while there is line of sight, and packets of information were sent with a CSV format and a low data with 300 bytes per packet.</p>
                     </div>
                     <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/can.jpg"></div>
                     <div class="col">
                         <h4>Implementation</h4>
-                        <p>The implementation of the CanSat was successful and cost effective with a fix cost of 70 dlls allowing for future scalability and easy to manufacture locally. A future improvement can be the development of surface mount components
-                            and a better microcontroller for more accurate ADC conversion. </p>
+                        <p>The implementation of the CanSat was successful and cost effective with a fix cost of 70 dlls allowing for future scalability and easy to manufacture locally. A future improvement can be the development of surface mount components and a better microcontroller for more accurate ADC conversion. </p>
                     </div>
                     <div class="col"><img class="img-thumbnail" src="assets/img/rea2l.jpg"></div>
                 </div>

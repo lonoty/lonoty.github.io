@@ -14,15 +14,14 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page project-page">
@@ -36,8 +35,7 @@
                     <div class="col-12 col-md-6 offset-md-1 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/prototype.png"></div>
                     <div class="col-xl-6">
                         <h3>Description</h3>
-                        <p>This project is part of the C++ Nanodegree in Udacity, where I chose to create a control system using ROS and a 32bit ARM microcontroller. The microcontroller monitors the velocity of the robot via encoders and its configured to
-                            send data to a main computer system where the PID system takes it and tells the microcontroller to output </p>
+                        <p>This project is part of the C++ Nanodegree in Udacity, where I chose to create a control system using ROS and a 32bit ARM microcontroller. The microcontroller monitors the velocity of the robot via encoders and its configured to send data to a main computer system where the PID system takes it and tells the microcontroller to output </p>
                         <p></p>
                     </div>
                     <div class="col-xl-12">
@@ -45,15 +43,12 @@
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;">
                         <h4>Software and Microcontroller</h4>
-                        <p>Since this project involves motors and electronics a microcontroller was used to configure the quadrature encoders using its dedicated peripheral, this helps the microcontroller not get saturated and provides an accurate reading.
-                            Since this system is a discrete control loop, timing is important and for that an interrupt timer was set up to allow for precise timing when the data is being sent. To communicate between the on-board computer and the microcontroller
-                            serial communication was used, to send velocity data and motor output.</p>
+                        <p>Since this project involves motors and electronics a microcontroller was used to configure the quadrature encoders using its dedicated peripheral, this helps the microcontroller not get saturated and provides an accurate reading. Since this system is a discrete control loop, timing is important and for that an interrupt timer was set up to allow for precise timing when the data is being sent. To communicate between the on-board computer and the microcontroller serial communication was used, to send velocity data and motor output.</p>
                     </div>
                     <div class="col-xl-6" style="padding-bottom: 15px;"><img class="img-thumbnail" src="assets/img/schematics.jpg"></div>
                     <div class="col">
                         <h4>Implementation and github documentation</h4>
-                        <p>The implementation of the robot can be shown in the video, where ROS is configured, I present the ability to set the reference of the motor plus change the tuning parameters while running the robot. This allows for easy and fast
-                            debugging of systems plus keeping a concise structure on how it works. Since this system was created with intention that other programmers can use it, I provided a well-defined documentation of the code and how it works.</p>
+                        <p>The implementation of the robot can be shown in the video, where ROS is configured, I present the ability to set the reference of the motor plus change the tuning parameters while running the robot. This allows for easy and fast debugging of systems plus keeping a concise structure on how it works. Since this system was created with intention that other programmers can use it, I provided a well-defined documentation of the code and how it works.</p>
                     </div>
                     <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/lr6J8KsvGoE" width="540" height="315"></iframe></div>
                 </div>
