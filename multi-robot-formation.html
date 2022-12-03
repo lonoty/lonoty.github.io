@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Project Page - Tomas Andres Olvera Hale</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project" style="padding-top: 20px;padding-bottom: 20px;">
+            <div class="container">
+                <div class="heading">
+                    <h2 style="margin-bottom: -50px;"><a href="igvc-page.html"><strong><span style="color: rgb(33, 37, 41);">Multi-robot formation control architecture (theoretical implementation)&nbsp;</span></strong></a><br></h2>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/clipboard-image-1.png"></div>
+                    <div class="col-xl-6">
+                        <h3>Description</h3>
+                        <p>A study on multi-robot formation algorithms and architecture following Wei Ren's research paper on&nbsp;&nbsp;“Distributed Coordination Architecture for Multi-Robot Formation Control”. Where I implement the algorithms on my own simulation environment and add a 3rd dimension for aerial vehicles.&nbsp;<br><br><br><br><br>Ren, Wei, and Nathan Sorensen. “Distributed Coordination Architecture for Multi-Robot Formation Control.” <em>Robotics and Autonomous Systems</em>, vol. 56, no. 4, 2008, pp. 324–333., https://doi.org/10.1016/j.robot.2007.08.005. <br><br></p>
+                        <p></p>
+                    </div>
+                    <div class="col-xl-12">
+                        <h2 class="text-center">Study</h2>
+                    </div>
+                    <div class="col-xl-6">
+                        <h4>Method</h4>
+                        <p>1. Leaders read current Mission Formation Center<br>2. Robots exchange information on Formation Center<br>3. Every robot uses a state estimator to estimate formation center<br>4. Robots move to keep in formation<br><br>Main Idea:<br>1. Leader sees followers lagging behind<br>2. Leader slows down to accommodate&nbsp;<br><br></p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-11.png"></div>
+                    <div class="col-xl-6">
+                        <h4>Implementation and parameters</h4>
+                        <p>Used all the equations provided on the paper where the estimation of the formation center is calculated as well as the robot dynamics. This was adapted and analyzed on both 2D and 3D by adding another dimension to the equation.</p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-12.png" style="width: 405px;"></div>
+                    <div class="col-xl-6">
+                        <h4>Simulation and testing</h4>
+                        <p>Using Matlab I created a simulation environment where 4 robots must keep a box formation thought flight while also taking into consideration the position of all the robots to determine where the formation center will be. The simulation also shows a trace of previous positions and where the relative formation center is of every robot.&nbsp;<br><br></p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-13.png" style="width: 404px;"></div>
+                    <div class="col">
+                        <h4>&nbsp;Square Formation: Figure 8<br></h4>
+                        <p><img src="assets/img/clipboard-image-15.png"></p>
+                    </div>
+                    <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/8AQu36ykRgE" width="540" height="315"></iframe></div>
+                    <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/pz82tYoxqvM" width="540" height="315"></iframe></div>
+                    <div class="col">
+                        <h4>Square Formation: 3D Saddle</h4>
+                        <p><img src="assets/img/clipboard-image-16.png"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"></div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

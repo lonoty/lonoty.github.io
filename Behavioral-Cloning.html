@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Project Page - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Tomas Andres Olvera Hale</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-me.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project" style="padding-top: 20px;padding-bottom: 20px;">
+            <div class="container">
+                <div class="heading">
+                    <h2 style="margin-bottom: -50px;"><a href="Hydroponics.html"><strong><span style="color: rgb(33, 37, 41);">Artificial Intelligence: Behavioral cloning for a real-time lane following robot using camera feedback</span></strong></a><br></h2>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 offset-xl-0 info"><img class="img-thumbnail" src="assets/img/clipboard-image-8.png"></div>
+                    <div class="col-lg-6 col-xl-6">
+                        <h3>Description</h3>
+                        <p><strong>Objective:&nbsp;</strong><span style="color: black;">The objective is to train a physical agent (robot) to navigate around the AUTOTRAC&nbsp;</span><span style="color: rgb(0, 0, 0);">roadmap using imitation learning with expert demonstration. </span><br><br><strong>Motivation:</strong> Physical robots are limited with the number of iterations it can make to train. (It’s harder for a human to physically set up a robot 10000 times or even more!)<br><br>Behavioral cloning is a method where an expert (in this case the driver) will show how the agent should interact with the given input (camera) and showing the ideal output (steering). Once having the dataset this becomes a supervised learning training model, that can be rolled out to the agent.<br><br><br></p>
+                        <p></p>
+                    </div>
+                    <div class="col-xl-12">
+                        <h2 class="text-center">Details</h2>
+                    </div>
+                    <div class="col-xl-6">
+                        <h4>The Robot</h4>
+                        <p>Rosbot 2.0 PRO (ROS was used for navigation and robot movement)&nbsp;<br>Specs<br><br><strong>CPU:</strong> UpBoard with 4 GB RAM, Quad-Core Intel Atom Z8350 1.92 GHz<br><br><strong>RGBD camera:</strong> Orbbec Astra with RGB image size 640x480 and depth image size 640x480 at 30 Hz<br><br><strong>LiDAR:</strong> RpLidar A2, 360 degree and up to 8m range<br><br><strong>IMU:&nbsp;</strong>9-Axis Accel/Gyro/Magnetometer sensor with MPU-9250<br><br></p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-2.png" style="width: 311px;margin: 3px;padding: 0px;text-align: center;" width="311" height="381"></div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-9.png" style="width: 463px;"></div>
+                    <div class="col">
+                        <h4><span style="color: black;">Creating the Dataset (Expert demonstration)</span></h4>
+                        <p>To create the expert demonstration data, the robot was driven for 7 minutes and created over 10,000 data sets which were then exported into a csv to capture the linear and angular velocity and it's respective .jpg images<br><br>The following parameters were used to capture both the camera feedback and the output velocities:<br><br><strong>Input:</strong> RGB camera at 30 Hz at 640x480<br><strong>Output:</strong> Angular velocity [-1.4 to 1.4] rad/s (using ROS /twist) at 30 Hz&nbsp;<br><strong>Constraints: </strong>Constant linear velocity of .3 meter per second<br><br></p>
+                    </div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-7.png" style="width: 518px;"></div>
+                    <div class="col">
+                        <h4><span style="color: black;">Models and Training</span></h4>
+                        <p>5 main models were trained on a NVIDIA GPU accelerated computer using PyTorch and Torchvision.&nbsp;<br><br><strong>Transformations:</strong> Rescale to a 224 x 224 image, and contrast adjustment, (Grayscale only for model 5)<br><strong>Optimizer:</strong> ADAM was used with a learning step of .0002<br><strong>Criterion:</strong> MSE loss was used (result minus the label)<br><br>I believe that overfitting was a problem since the test results was not too great<br><br></p>
+                    </div>
+                    <div class="col-xl-6">
+                        <h4>Analyzing the matrix results</h4>
+                        <p>By looking at the convolutional filters that the neural network created we can see that it was able to develop edge detection for inner and outer edge. All the convolutional filters reduce to some sort of edge detection and the neural network takes that filtered data to determine the angular velocity it should have.&nbsp;<br><br><br></p>
+                    </div>
+                    <div class="col-xl-6"><img src="assets/img/clipboard-image-6.png" style="width: 568px;"></div>
+                    <div class="col-xl-6"><img class="img-thumbnail" src="assets/img/clipboard-image-4.png"></div>
+                    <div class="col">
+                        <h4>Real-Time Execution</h4>
+                        <p>In order to make this a real-time execution the internal computer of the robot will have the neural network on board. This network will be actuated upon arrival of a new camera frame which is issued at 30Hz per second. The result comes out as the required angular velocity the robot should have which is converted form pytorch output into a ROS publisher. This ROS publisher send the right commands to the motor controllers which will actuate the motors and move at the desired angular velocity.&nbsp;<br><br></p>
+                    </div>
+                    <div class="col-xl-6">
+                        <h4>Results</h4>
+                        <p><strong>Trained model: </strong>The trained model seems to be able to analyze the image and decide on the proper angular velocity. But seems to struggle on scenarios where the expert driver did not go over, which in this case is when the half of the robot is out of the track. This is expected and an known issue with behavioral cloning since the learning is limited to the known states of the expert driver. Improvements could be done by adding more outlying scenarios which can help the model learn faster.&nbsp;<br><br><strong>Real-Time Execution: </strong>While the robot was able to perform for some parts where there is not that much change in scenery, there is a underlying problem on the execution time. The robot live camera is publishing a frame at a rate of 30 Hz but the time it takes for the robot to process the data and compute the neural network reduces the run time to 15 Hz per seconds. This is enough for the system to fall out of bound and go into an unknown scenario. This can be fixed by having a faster computer or offload the neural network onto a GPU.<br><br><br></p>
+                    </div>
+                    <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/aNmOv3KQRsg" width="540" height="315"></iframe></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"></div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
